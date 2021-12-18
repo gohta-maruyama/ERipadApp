@@ -3,19 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21D823E79BA4834F0804C6F6 /* Pods_ERipadApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C741CAC0E3F74F6679A1FE /* Pods_ERipadApp.framework */; };
 		923A901C276D804D00CA8411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A901B276D804D00CA8411 /* AppDelegate.swift */; };
 		923A901E276D804D00CA8411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A901D276D804D00CA8411 /* SceneDelegate.swift */; };
 		923A9020276D804D00CA8411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A901F276D804D00CA8411 /* ViewController.swift */; };
 		923A9023276D804D00CA8411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923A9021276D804D00CA8411 /* Main.storyboard */; };
 		923A9025276D804F00CA8411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923A9024276D804F00CA8411 /* Assets.xcassets */; };
 		923A9028276D804F00CA8411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923A9026276D804F00CA8411 /* LaunchScreen.storyboard */; };
+		923A9030276D806600CA8411 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A902F276D806600CA8411 /* LoginViewController.swift */; };
+		923A9032276D807100CA8411 /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9031276D807100CA8411 /* HallViewController.swift */; };
+		923A9034276D807B00CA8411 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9033276D807B00CA8411 /* StatusViewController.swift */; };
+		923A9036276D808800CA8411 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9035276D808800CA8411 /* ChatViewController.swift */; };
+		923A9038276D828000CA8411 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923A9037276D828000CA8411 /* GoogleService-Info.plist */; };
+		923A903A276D8A2800CA8411 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9039276D8A2800CA8411 /* TabBarController.swift */; };
+		923A903C276D8D5D00CA8411 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A903B276D8D5D00CA8411 /* SettingViewController.swift */; };
+		923A903E276D8FBA00CA8411 /* AreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A903D276D8FBA00CA8411 /* AreaData.swift */; };
+		923A9040276D8FC600CA8411 /* HallData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A903F276D8FC600CA8411 /* HallData.swift */; };
+		923A9042276D8FD500CA8411 /* BroadcastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9041276D8FD500CA8411 /* BroadcastData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C741CAC0E3F74F6679A1FE /* Pods_ERipadApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERipadApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		923A9018276D804D00CA8411 /* ERipadApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ERipadApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		923A901B276D804D00CA8411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		923A901D276D804D00CA8411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +36,18 @@
 		923A9024276D804F00CA8411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		923A9027276D804F00CA8411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923A9029276D804F00CA8411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923A902F276D806600CA8411 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		923A9031276D807100CA8411 /* HallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallViewController.swift; sourceTree = "<group>"; };
+		923A9033276D807B00CA8411 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		923A9035276D808800CA8411 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		923A9037276D828000CA8411 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		923A9039276D8A2800CA8411 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		923A903B276D8D5D00CA8411 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		923A903D276D8FBA00CA8411 /* AreaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaData.swift; sourceTree = "<group>"; };
+		923A903F276D8FC600CA8411 /* HallData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallData.swift; sourceTree = "<group>"; };
+		923A9041276D8FD500CA8411 /* BroadcastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastData.swift; sourceTree = "<group>"; };
+		A136DFA037F642B473F62790 /* Pods-ERipadApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERipadApp.release.xcconfig"; path = "Target Support Files/Pods-ERipadApp/Pods-ERipadApp.release.xcconfig"; sourceTree = "<group>"; };
+		FD105082FA8D8935E0EB704F /* Pods-ERipadApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERipadApp.debug.xcconfig"; path = "Target Support Files/Pods-ERipadApp/Pods-ERipadApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D823E79BA4834F0804C6F6 /* Pods_ERipadApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B388CD8F7EA832AFBB3E0E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40C741CAC0E3F74F6679A1FE /* Pods_ERipadApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DE22A5338CC5799F5BBE14B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD105082FA8D8935E0EB704F /* Pods-ERipadApp.debug.xcconfig */,
+				A136DFA037F642B473F62790 /* Pods-ERipadApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		923A900F276D804D00CA8411 = {
 			isa = PBXGroup;
 			children = (
 				923A901A276D804D00CA8411 /* ERipadApp */,
 				923A9019276D804D00CA8411 /* Products */,
+				4DE22A5338CC5799F5BBE14B /* Pods */,
+				1B388CD8F7EA832AFBB3E0E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +103,20 @@
 				923A901B276D804D00CA8411 /* AppDelegate.swift */,
 				923A901D276D804D00CA8411 /* SceneDelegate.swift */,
 				923A901F276D804D00CA8411 /* ViewController.swift */,
+				923A902F276D806600CA8411 /* LoginViewController.swift */,
+				923A9031276D807100CA8411 /* HallViewController.swift */,
+				923A9039276D8A2800CA8411 /* TabBarController.swift */,
+				923A9033276D807B00CA8411 /* StatusViewController.swift */,
+				923A9035276D808800CA8411 /* ChatViewController.swift */,
+				923A903B276D8D5D00CA8411 /* SettingViewController.swift */,
+				923A903D276D8FBA00CA8411 /* AreaData.swift */,
+				923A903F276D8FC600CA8411 /* HallData.swift */,
+				923A9041276D8FD500CA8411 /* BroadcastData.swift */,
 				923A9021276D804D00CA8411 /* Main.storyboard */,
 				923A9024276D804F00CA8411 /* Assets.xcassets */,
 				923A9026276D804F00CA8411 /* LaunchScreen.storyboard */,
 				923A9029276D804F00CA8411 /* Info.plist */,
+				923A9037276D828000CA8411 /* GoogleService-Info.plist */,
 			);
 			path = ERipadApp;
 			sourceTree = "<group>";
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 923A902C276D804F00CA8411 /* Build configuration list for PBXNativeTarget "ERipadApp" */;
 			buildPhases = (
+				E9E3098B4667E857EB95A67E /* [CP] Check Pods Manifest.lock */,
 				923A9014276D804D00CA8411 /* Sources */,
 				923A9015276D804D00CA8411 /* Frameworks */,
 				923A9016276D804D00CA8411 /* Resources */,
+				E48DDA6DC35B42DDC6118129 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923A9028276D804F00CA8411 /* LaunchScreen.storyboard in Resources */,
+				923A9038276D828000CA8411 /* GoogleService-Info.plist in Resources */,
 				923A9025276D804F00CA8411 /* Assets.xcassets in Resources */,
 				923A9023276D804D00CA8411 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +189,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E48DDA6DC35B42DDC6118129 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ERipadApp/Pods-ERipadApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ERipadApp/Pods-ERipadApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ERipadApp/Pods-ERipadApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E3098B4667E857EB95A67E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ERipadApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		923A9014276D804D00CA8411 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A9040276D8FC600CA8411 /* HallData.swift in Sources */,
+				923A9030276D806600CA8411 /* LoginViewController.swift in Sources */,
+				923A903A276D8A2800CA8411 /* TabBarController.swift in Sources */,
 				923A9020276D804D00CA8411 /* ViewController.swift in Sources */,
 				923A901C276D804D00CA8411 /* AppDelegate.swift in Sources */,
+				923A903E276D8FBA00CA8411 /* AreaData.swift in Sources */,
+				923A9036276D808800CA8411 /* ChatViewController.swift in Sources */,
+				923A903C276D8D5D00CA8411 /* SettingViewController.swift in Sources */,
 				923A901E276D804D00CA8411 /* SceneDelegate.swift in Sources */,
+				923A9034276D807B00CA8411 /* StatusViewController.swift in Sources */,
+				923A9032276D807100CA8411 /* HallViewController.swift in Sources */,
+				923A9042276D8FD500CA8411 /* BroadcastData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +391,7 @@
 		};
 		923A902D276D804F00CA8411 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD105082FA8D8935E0EB704F /* Pods-ERipadApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +405,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.gohta.maruyama.ERipadApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		923A902E276D804F00CA8411 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A136DFA037F642B473F62790 /* Pods-ERipadApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.gohta.maruyama.ERipadApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
