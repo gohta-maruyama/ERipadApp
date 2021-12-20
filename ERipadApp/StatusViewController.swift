@@ -97,10 +97,13 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        let broadcast = broadArray[indexPath.item]
-        if let label = cell.contentView.viewWithTag(1) as? UILabel {
-            label.text = broadcast.name
-        }
+        
+        let label = cell.contentView.viewWithTag(1) as? UILabel
+        label?.text = broadArray[indexPath.row].name
+        
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1.0
+        
         return cell
     }
     
