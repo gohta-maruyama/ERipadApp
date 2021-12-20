@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class StatusViewController: UIViewController {
+class StatusViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var area: AreaData!
     var hall: HallData!
@@ -49,9 +49,14 @@ class StatusViewController: UIViewController {
     @IBOutlet weak var emergencyEndButton: UIButton!
     @IBOutlet weak var emergencyReadyFakeButton: UIButton!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         HallNameTextLabel.text = "\(hall.name)会館"
         self.HallNameTextLabel.layer.borderColor = UIColor.blue.cgColor
@@ -63,6 +68,40 @@ class StatusViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
+        if Auth.auth().currentUser != nil {
+            let broadRef = Firestore.firestore().collection("areas").document(area!.id).collection("halls").document(hall!.id).collection("broadcasts").order(by: "code")
+            broadRef.getDocuments() { (querySnapshot, error) in
+                if let error = error {
+                    print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
+                    return
+                }
+                self.broadArray = querySnapshot!.documents.map { document in
+                    let broadcast = BroadcastData(document: document)
+                    print("DEBUG_PRINT: document取得 \(broadcast.name)")
+
+                    return broadcast
+
+                }
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return broadArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let broadcast = broadArray[indexPath.item]
+        if let label = cell.contentView.viewWithTag(1) as? UILabel {
+            label.text = broadcast.name
+        }
+        return cell
     }
     
     

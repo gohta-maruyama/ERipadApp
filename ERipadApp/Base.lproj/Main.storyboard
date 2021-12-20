@@ -98,18 +98,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Fx-ay-S7v">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0Fx-ay-S7v">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jph-aM-3AV">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hgI-Pq-8A9">
-                                        <rect key="frame" x="155.5" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gkh-hE-4VM">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -169,6 +161,7 @@
                     <navigationItem key="navigationItem" id="NsN-x9-ox1"/>
                     <connections>
                         <outlet property="HallNameTextLabel" destination="DCk-Jg-CSB" id="rax-lq-0yD"/>
+                        <outlet property="collectionView" destination="OmW-lh-M81" id="bbY-5z-JRJ"/>
                         <outlet property="emergencyEndButton" destination="KNG-w2-7iG" id="bmS-iw-D32"/>
                         <outlet property="emergencyReadyButton" destination="yff-io-rLu" id="gg1-aD-QL0"/>
                         <outlet property="emergencyReadyFakeButton" destination="aJF-Z6-j7W" id="Psi-9h-WLD"/>
