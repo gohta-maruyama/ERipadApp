@@ -101,8 +101,19 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
         let label = cell.contentView.viewWithTag(1) as? UILabel
         label?.text = broadArray[indexPath.row].name
         
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1.0
+//        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 5.0
+        if broadArray[indexPath.row].level == 1 {
+            cell.layer.borderColor = UIColor.black.cgColor
+        } else if broadArray[indexPath.row].level == 2 {
+            cell.layer.borderColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1).cgColor
+        } else if broadArray[indexPath.row].level == 3 {
+            cell.layer.borderColor = UIColor(red: 0.50, green: 0.50, blue: 0.50, alpha: 1).cgColor
+        } else if broadArray[indexPath.row].level == 4 {
+            cell.layer.borderColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1).cgColor
+        } else if broadArray[indexPath.row].level == 5 {
+            cell.layer.borderColor = UIColor(red: 0.05, green: 0.05, blue: 0.05, alpha: 1).cgColor
+        }
         
         return cell
     }
