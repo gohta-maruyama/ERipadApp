@@ -21,23 +21,25 @@ class StatusViewController: UIViewController {
         ref.updateData([
             "emergencyStatus": 1
         ])
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: .repeat, animations: {self.emergencyReadyButton.alpha = 0.0} ) {
-            (_) in
-            self.emergencyReadyButton.alpha = 1.0
-        }
+        
         print("火起こしOK")
         emergencyEndButton.isHidden = false
         emergencyEndButton.isEnabled = true
+        emergencyReadyButton.isEnabled = false
+        emergencyReadyButton.isHidden = true
+        emergencyReadyFakeButton.isHidden = false
     }
     @IBAction func emergencyEndButton(_ sender: Any) {
         let ref = Firestore.firestore().collection("emergencies").document(hall.id)
         ref.updateData([
             "emergencyStatus": 0
         ])
-        self.emergencyReadyButton.alpha = 1.0
         
         emergencyEndButton.isHidden = true
         emergencyEndButton.isEnabled = false
+        emergencyReadyButton.isHidden = false
+        emergencyReadyButton.isEnabled = true
+        emergencyReadyFakeButton.isHidden = true
     }
     
     
@@ -45,6 +47,7 @@ class StatusViewController: UIViewController {
     
     @IBOutlet weak var emergencyReadyButton: UIButton!
     @IBOutlet weak var emergencyEndButton: UIButton!
+    @IBOutlet weak var emergencyReadyFakeButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -53,11 +56,15 @@ class StatusViewController: UIViewController {
         HallNameTextLabel.text = "\(hall.name)会館"
         self.HallNameTextLabel.layer.borderColor = UIColor.blue.cgColor
         self.HallNameTextLabel.layer.borderWidth = 2.0
-        emergencyReadyButton.titleLabel?.numberOfLines = 2
-        emergencyReadyButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .repeat, animations: {self.emergencyReadyFakeButton.alpha = 0.0} ) {
+            (_) in
+            self.emergencyReadyFakeButton.alpha = 1.0
+        }
         
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

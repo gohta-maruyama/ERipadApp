@@ -72,7 +72,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yff-io-rLu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yff-io-rLu">
                                 <rect key="frame" x="905" y="70" width="125" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
@@ -80,7 +80,10 @@
                                     <constraint firstAttribute="height" constant="50" id="UjM-M1-ITW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="火起こしスイッチ"/>
+                                <state key="normal">
+                                    <string key="title">火起こし
+スイッチ</string>
+                                </state>
                                 <connections>
                                     <action selector="emergencyReadyButton:" destination="02P-Zy-csR" eventType="touchUpInside" id="HmM-QH-0wQ"/>
                                 </connections>
@@ -113,25 +116,43 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNG-w2-7iG">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KNG-w2-7iG">
                                 <rect key="frame" x="760" y="70" width="125" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="7we-Kw-sUJ"/>
                                     <constraint firstAttribute="height" constant="50" id="OD0-RJ-lwy"/>
                                 </constraints>
-                                <state key="normal" title="火起こし終了">
+                                <state key="normal">
+                                    <string key="title">火起こし
+終了指示</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="emergencyEndButton:" destination="02P-Zy-csR" eventType="touchUpInside" id="oHb-TR-JIb"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aJF-Z6-j7W">
+                                <rect key="frame" x="905" y="70" width="125" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8zT-PU-8OO"/>
+                                    <constraint firstAttribute="width" constant="125" id="O4G-5N-m25"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal">
+                                    <string key="title">火起こし
+指示中…</string>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iFu-H3-FP2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yff-io-rLu" firstAttribute="centerY" secondItem="DCk-Jg-CSB" secondAttribute="centerY" id="52M-uO-Kx7"/>
+                            <constraint firstItem="aJF-Z6-j7W" firstAttribute="centerX" secondItem="yff-io-rLu" secondAttribute="centerX" id="HUD-qO-ueu"/>
+                            <constraint firstItem="aJF-Z6-j7W" firstAttribute="leading" secondItem="yff-io-rLu" secondAttribute="leading" id="JcK-qV-6Yp"/>
+                            <constraint firstItem="aJF-Z6-j7W" firstAttribute="centerY" secondItem="KNG-w2-7iG" secondAttribute="centerY" id="L6h-O7-cfL"/>
                             <constraint firstItem="DCk-Jg-CSB" firstAttribute="centerX" secondItem="9g8-vj-yyc" secondAttribute="centerX" id="Lkv-kS-N6L"/>
                             <constraint firstItem="iFu-H3-FP2" firstAttribute="bottom" secondItem="OmW-lh-M81" secondAttribute="bottom" constant="20" id="MUN-z6-0hm"/>
                             <constraint firstItem="OmW-lh-M81" firstAttribute="top" secondItem="DCk-Jg-CSB" secondAttribute="bottom" constant="20" id="PdZ-mh-Iui"/>
@@ -142,6 +163,7 @@
                             <constraint firstItem="yff-io-rLu" firstAttribute="leading" secondItem="KNG-w2-7iG" secondAttribute="trailing" constant="20" id="lzE-1f-d2S"/>
                             <constraint firstItem="iFu-H3-FP2" firstAttribute="trailing" secondItem="yff-io-rLu" secondAttribute="trailing" constant="50" id="oAk-bn-tOZ"/>
                             <constraint firstItem="OmW-lh-M81" firstAttribute="leading" secondItem="iFu-H3-FP2" secondAttribute="leading" constant="10" id="qe6-wq-1Hu"/>
+                            <constraint firstItem="aJF-Z6-j7W" firstAttribute="trailing" secondItem="yff-io-rLu" secondAttribute="trailing" id="rbf-Rk-OHL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NsN-x9-ox1"/>
@@ -149,6 +171,7 @@
                         <outlet property="HallNameTextLabel" destination="DCk-Jg-CSB" id="rax-lq-0yD"/>
                         <outlet property="emergencyEndButton" destination="KNG-w2-7iG" id="bmS-iw-D32"/>
                         <outlet property="emergencyReadyButton" destination="yff-io-rLu" id="gg1-aD-QL0"/>
+                        <outlet property="emergencyReadyFakeButton" destination="aJF-Z6-j7W" id="Psi-9h-WLD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rL9-cH-1Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
