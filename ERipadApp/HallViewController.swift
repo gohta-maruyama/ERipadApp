@@ -14,6 +14,7 @@ class HallViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var areasArray: [AreaData] = []
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -87,16 +88,14 @@ class HallViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let statusViewController: StatusViewController = segue.destination as! StatusViewController
+        
         if segue.identifier == "showStatusSegue" {
-            if let indexPath = tableView.indexPathForSelectedRow{
-                
-               guard let destination = segue.destination as? StatusViewController else{
-                
-               fatalError("Failed to prepare StatusViewController")
-            }
-                let area = areasArray[indexPath.section]
-                destination.hallName = area.halls[indexPath.row].name
-            }
+            
+            let indexPath = self.tableView.indexPathForSelectedRow
+            let area = areasArray[indexPath!.section]
+            statusViewController.area = area
+            statusViewController.hall = area.halls[indexPath!.row]
         }
     }
     
