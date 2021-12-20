@@ -25,6 +25,7 @@ class StatusViewController: UIViewController {
             (_) in
             self.emergencyReadyButton.alpha = 1.0
         }
+        print("火起こしOK")
         emergencyEndButton.isHidden = false
         emergencyEndButton.isEnabled = true
     }
