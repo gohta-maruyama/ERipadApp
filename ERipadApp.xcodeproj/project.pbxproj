@@ -25,6 +25,10 @@
 		923A9040276D8FC600CA8411 /* HallData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A903F276D8FC600CA8411 /* HallData.swift */; };
 		923A9042276D8FD500CA8411 /* BroadcastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9041276D8FD500CA8411 /* BroadcastData.swift */; };
 		923A904C2773340400CA8411 /* BroadcastHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A904B2773340400CA8411 /* BroadcastHeaderView.swift */; };
+		923A904E27743C2900CA8411 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A904D27743C2900CA8411 /* PostData.swift */; };
+		923A90532774431B00CA8411 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A90512774431A00CA8411 /* PostTableViewCell.swift */; };
+		923A90542774431B00CA8411 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923A90522774431B00CA8411 /* PostTableViewCell.xib */; };
+		923A905627744D9F00CA8411 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A905527744D9F00CA8411 /* PlaceHolderTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		923A903F276D8FC600CA8411 /* HallData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallData.swift; sourceTree = "<group>"; };
 		923A9041276D8FD500CA8411 /* BroadcastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastData.swift; sourceTree = "<group>"; };
 		923A904B2773340400CA8411 /* BroadcastHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastHeaderView.swift; sourceTree = "<group>"; };
+		923A904D27743C2900CA8411 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		923A90512774431A00CA8411 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		923A90522774431B00CA8411 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		923A905527744D9F00CA8411 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		A136DFA037F642B473F62790 /* Pods-ERipadApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERipadApp.release.xcconfig"; path = "Target Support Files/Pods-ERipadApp/Pods-ERipadApp.release.xcconfig"; sourceTree = "<group>"; };
 		FD105082FA8D8935E0EB704F /* Pods-ERipadApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERipadApp.debug.xcconfig"; path = "Target Support Files/Pods-ERipadApp/Pods-ERipadApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +123,10 @@
 				923A903F276D8FC600CA8411 /* HallData.swift */,
 				923A9041276D8FD500CA8411 /* BroadcastData.swift */,
 				923A904B2773340400CA8411 /* BroadcastHeaderView.swift */,
+				923A904D27743C2900CA8411 /* PostData.swift */,
+				923A90512774431A00CA8411 /* PostTableViewCell.swift */,
+				923A90522774431B00CA8411 /* PostTableViewCell.xib */,
+				923A905527744D9F00CA8411 /* PlaceHolderTextView.swift */,
 				923A9021276D804D00CA8411 /* Main.storyboard */,
 				923A9024276D804F00CA8411 /* Assets.xcassets */,
 				923A9026276D804F00CA8411 /* LaunchScreen.storyboard */,
@@ -184,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923A9028276D804F00CA8411 /* LaunchScreen.storyboard in Resources */,
+				923A90542774431B00CA8411 /* PostTableViewCell.xib in Resources */,
 				923A9038276D828000CA8411 /* GoogleService-Info.plist in Resources */,
 				923A9025276D804F00CA8411 /* Assets.xcassets in Resources */,
 				923A9023276D804D00CA8411 /* Main.storyboard in Resources */,
@@ -241,9 +254,12 @@
 			files = (
 				923A9040276D8FC600CA8411 /* HallData.swift in Sources */,
 				923A9030276D806600CA8411 /* LoginViewController.swift in Sources */,
+				923A90532774431B00CA8411 /* PostTableViewCell.swift in Sources */,
 				923A903A276D8A2800CA8411 /* TabBarController.swift in Sources */,
 				923A9020276D804D00CA8411 /* ViewController.swift in Sources */,
 				923A901C276D804D00CA8411 /* AppDelegate.swift in Sources */,
+				923A904E27743C2900CA8411 /* PostData.swift in Sources */,
+				923A905627744D9F00CA8411 /* PlaceHolderTextView.swift in Sources */,
 				923A903E276D8FBA00CA8411 /* AreaData.swift in Sources */,
 				923A9036276D808800CA8411 /* ChatViewController.swift in Sources */,
 				923A903C276D8D5D00CA8411 /* SettingViewController.swift in Sources */,

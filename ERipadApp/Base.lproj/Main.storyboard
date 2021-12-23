@@ -214,14 +214,69 @@
                     <view key="view" contentMode="scaleToFill" id="7ri-DQ-aGN">
                         <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BO8-Hq-YfH">
+                                <rect key="frame" x="870" y="705" width="200" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="94z-gf-et3"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yqp-fa-4a3"/>
+                                </constraints>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="handleSendButton:" destination="qRQ-QG-t4J" eventType="touchUpInside" id="Fxh-XS-RDV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="タイトル" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-NS-9td">
+                                <rect key="frame" x="10" y="550" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="aTP-3q-mre"/>
+                                    <constraint firstAttribute="height" constant="40" id="mBd-QK-Or4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-NC-x8V" customClass="PlaceHolderTextView" customModule="ERipadApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="595" width="1060" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mWf-rr-Wn7"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5ee-So-6Pn">
+                                <rect key="frame" x="10" y="10" width="1060" height="520"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g0j-YB-LHE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tIn-NS-9td" firstAttribute="top" secondItem="5ee-So-6Pn" secondAttribute="bottom" constant="20" id="2TF-EF-iOo"/>
+                            <constraint firstItem="tIn-NS-9td" firstAttribute="leading" secondItem="g0j-YB-LHE" secondAttribute="leading" constant="10" id="4D5-uP-5Xm"/>
+                            <constraint firstItem="Jv5-NC-x8V" firstAttribute="top" secondItem="tIn-NS-9td" secondAttribute="bottom" constant="5" id="5j5-rA-LrK"/>
+                            <constraint firstItem="BO8-Hq-YfH" firstAttribute="trailing" secondItem="Jv5-NC-x8V" secondAttribute="trailing" id="CXq-6e-v42"/>
+                            <constraint firstItem="5ee-So-6Pn" firstAttribute="leading" secondItem="g0j-YB-LHE" secondAttribute="leading" constant="10" id="Dgo-Id-hJV"/>
+                            <constraint firstItem="g0j-YB-LHE" firstAttribute="bottom" secondItem="BO8-Hq-YfH" secondAttribute="bottom" constant="15" id="KEz-wC-E6z"/>
+                            <constraint firstItem="5ee-So-6Pn" firstAttribute="top" secondItem="g0j-YB-LHE" secondAttribute="top" constant="10" id="LFS-Ix-WIB"/>
+                            <constraint firstItem="g0j-YB-LHE" firstAttribute="trailing" secondItem="5ee-So-6Pn" secondAttribute="trailing" constant="10" id="Uy6-XE-Kto"/>
+                            <constraint firstItem="g0j-YB-LHE" firstAttribute="trailing" secondItem="Jv5-NC-x8V" secondAttribute="trailing" constant="10" id="bTA-JM-w9T"/>
+                            <constraint firstItem="BO8-Hq-YfH" firstAttribute="top" secondItem="Jv5-NC-x8V" secondAttribute="bottom" constant="10" id="kGf-OM-tOA"/>
+                            <constraint firstItem="Jv5-NC-x8V" firstAttribute="leading" secondItem="tIn-NS-9td" secondAttribute="leading" id="vDp-8A-TEN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ニュース" image="newspaper" catalog="system" id="7Hl-gM-FRp"/>
+                    <connections>
+                        <outlet property="commentTextView" destination="Jv5-NC-x8V" id="Eo1-v3-hyf"/>
+                        <outlet property="tableView" destination="5ee-So-6Pn" id="wuR-YN-MFU"/>
+                        <outlet property="titleTextField" destination="tIn-NS-9td" id="BbH-gI-mrZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5f-58-G8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="852"/>
+            <point key="canvasLocation" x="737.77777777777771" y="851.85185185185185"/>
         </scene>
         <!--設定-->
         <scene sceneID="TI3-aU-ngm">
@@ -380,6 +435,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
