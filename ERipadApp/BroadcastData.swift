@@ -35,5 +35,14 @@ class BroadcastData: NSObject {
         
 
         }
+    func getPreCode() -> String {
+        let preCode = String(String(self.code).prefix(3))
+        return preCode
+    }
+    
+    func isTop() -> Bool {
+        let lastCode = String(String(self.code).suffix(6))
+        return lastCode == "000000"
+    }
     
 }

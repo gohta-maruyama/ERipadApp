@@ -24,6 +24,7 @@
 		923A903E276D8FBA00CA8411 /* AreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A903D276D8FBA00CA8411 /* AreaData.swift */; };
 		923A9040276D8FC600CA8411 /* HallData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A903F276D8FC600CA8411 /* HallData.swift */; };
 		923A9042276D8FD500CA8411 /* BroadcastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A9041276D8FD500CA8411 /* BroadcastData.swift */; };
+		923A904C2773340400CA8411 /* BroadcastHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A904B2773340400CA8411 /* BroadcastHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		923A903D276D8FBA00CA8411 /* AreaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaData.swift; sourceTree = "<group>"; };
 		923A903F276D8FC600CA8411 /* HallData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallData.swift; sourceTree = "<group>"; };
 		923A9041276D8FD500CA8411 /* BroadcastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastData.swift; sourceTree = "<group>"; };
+		923A904B2773340400CA8411 /* BroadcastHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastHeaderView.swift; sourceTree = "<group>"; };
 		A136DFA037F642B473F62790 /* Pods-ERipadApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERipadApp.release.xcconfig"; path = "Target Support Files/Pods-ERipadApp/Pods-ERipadApp.release.xcconfig"; sourceTree = "<group>"; };
 		FD105082FA8D8935E0EB704F /* Pods-ERipadApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERipadApp.debug.xcconfig"; path = "Target Support Files/Pods-ERipadApp/Pods-ERipadApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				923A903D276D8FBA00CA8411 /* AreaData.swift */,
 				923A903F276D8FC600CA8411 /* HallData.swift */,
 				923A9041276D8FD500CA8411 /* BroadcastData.swift */,
+				923A904B2773340400CA8411 /* BroadcastHeaderView.swift */,
 				923A9021276D804D00CA8411 /* Main.storyboard */,
 				923A9024276D804F00CA8411 /* Assets.xcassets */,
 				923A9026276D804F00CA8411 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 				923A903C276D8D5D00CA8411 /* SettingViewController.swift in Sources */,
 				923A901E276D804D00CA8411 /* SceneDelegate.swift in Sources */,
 				923A9034276D807B00CA8411 /* StatusViewController.swift in Sources */,
+				923A904C2773340400CA8411 /* BroadcastHeaderView.swift in Sources */,
 				923A9032276D807100CA8411 /* HallViewController.swift in Sources */,
 				923A9042276D8FD500CA8411 /* BroadcastData.swift in Sources */,
 			);

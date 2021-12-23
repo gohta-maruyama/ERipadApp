@@ -13,8 +13,8 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var area: AreaData!
     var hall: HallData!
-    var broadcast: BroadcastData!
-    var broadArray: [BroadcastData] = []
+    var topBroadcasts: [BroadcastData] = []
+    var childBroadcasts: [String: [BroadcastData]] = [:]
     
     @IBAction func emergencyReadyButton(_ sender: Any) {
         let ref = Firestore.firestore().collection("emergencies").document(hall.id)
@@ -66,39 +66,53 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
             self.emergencyReadyFakeButton.alpha = 1.0
         }
         
+        guard let headerSize = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {return}
+        headerSize.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 100)
+        
+        
         // Do any additional setup after loading the view.
-//
-//        if Auth.auth().currentUser != nil {
-//            let broadRef = Firestore.firestore().collection("areas").document(area!.id).collection("halls").document(hall!.id).collection("broadcasts").order(by: "code")
-//            broadRef.getDocuments() { (querySnapshot, error) in
-//                if let error = error {
-//                    print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
-//                    return
-//                }
-//                self.broadArray = querySnapshot!.documents.map { document in
-//                    let broadcast = BroadcastData(document: document)
-//                    print("DEBUG_PRINT: document取得 \(broadcast.name)")
-//
-//                    return broadcast
-//
-//                }
-//                self.collectionView.reloadData()
-//            }
-//        }
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "BroadcastHeader", for: indexPath) as! BroadcastHeaderView
+        header.layer.borderColor = UIColor.black.cgColor
+        header.layer.borderWidth = 5.0
+        if kind == UICollectionView.elementKindSectionHeader {
+            let topBroadcast = topBroadcasts[indexPath.section]
+            header.headLabel.text = topBroadcast.name
+            if topBroadcast.status == 0 {
+                header.backgroundColor = .white
+            }else if topBroadcast.status == 1 {
+                header.backgroundColor = .cyan
+            }else if topBroadcast.status == 2 {
+                header.backgroundColor = .yellow
+            }else if topBroadcast.status == 3 {
+                header.backgroundColor = .green
+            }else if topBroadcast.status == 4 {
+                header.backgroundColor = .orange
+            }else if topBroadcast.status == 5 {
+                header.backgroundColor = .purple
+            }
+            return header
+        }
+        return UICollectionReusableView()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return topBroadcasts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return broadArray.count
+        let topBroadcast = topBroadcasts[section]
+        return childBroadcasts[topBroadcast.getPreCode()]!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
-        let broadcast = broadArray[indexPath.row]
+        let topBroadcast = topBroadcasts[indexPath.section]
+        let broadcast = childBroadcasts[topBroadcast.getPreCode()]![indexPath.row]
         let label = cell.contentView.viewWithTag(1) as? UILabel
         label?.text = broadcast.name
         
@@ -133,7 +147,6 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
         return cell
     }
     
-    var cellColor = 0
     
     override func viewWillAppear(_ animated: Bool) {
         if Auth.auth().currentUser != nil {
@@ -143,11 +156,23 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
                     print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
                     return
                 }
-                self.broadArray = querySnapshot!.documents.map { document in
+                self.topBroadcasts = []
+                self.childBroadcasts = [:]
+                let documents = querySnapshot!.documents
+                for document in documents {
                     let broadcast = BroadcastData(document: document)
                     print("DEBUG_PRINT: document取得 \(broadcast.status)")
                     
-                    return broadcast
+                    if broadcast.isTop() {
+                        self.topBroadcasts.append(broadcast)
+                    } else{
+                        if self.childBroadcasts[broadcast.getPreCode()] == nil {
+                            self.childBroadcasts[broadcast.getPreCode()] = []
+                        }
+                     
+                        self.childBroadcasts[broadcast.getPreCode()]!.append(broadcast)
+                        
+                        }
                     
                 }
                 self.collectionView.reloadData()

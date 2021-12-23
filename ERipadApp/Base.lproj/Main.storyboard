@@ -93,13 +93,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8cJ-Gm-dSZ">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0Fx-ay-S7v">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jph-aM-3AV">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -119,6 +119,25 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="BroadcastHeader" id="teY-T1-hu1" customClass="BroadcastHeaderView" customModule="ERipadApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="1060" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-EX-isC">
+                                            <rect key="frame" x="506" y="13" width="48" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1ag-EX-isC" firstAttribute="centerX" secondItem="teY-T1-hu1" secondAttribute="centerX" id="3BU-yy-vuB"/>
+                                        <constraint firstItem="1ag-EX-isC" firstAttribute="centerY" secondItem="teY-T1-hu1" secondAttribute="centerY" id="eTl-06-yJa"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headLabel" destination="1ag-EX-isC" id="vuZ-eZ-WOR"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="02P-Zy-csR" id="3bW-Ck-k61"/>
                                     <outlet property="delegate" destination="02P-Zy-csR" id="MJf-06-2Mz"/>
