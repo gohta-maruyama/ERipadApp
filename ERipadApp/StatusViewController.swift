@@ -32,9 +32,10 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBAction func emergencyEndButton(_ sender: Any) {
         let ref = Firestore.firestore().collection("emergencies").document(hall.id)
         ref.updateData([
-            "emergencyStatus": 0
+            "emergencyStatus": 2
         ])
         
+        print("火起こし終了指示OK")
         emergencyEndButton.isHidden = true
         emergencyEndButton.isEnabled = false
         emergencyReadyButton.isHidden = false
@@ -69,6 +70,11 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
         guard let headerSize = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {return}
         headerSize.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 100)
         
+        guard let cellSize = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {return}
+        cellSize.itemSize = CGSize(width: 200, height: 80)
+        
+        guard let cellLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {return}
+        cellLayout.sectionInset = UIEdgeInsets(top: 10, left: 0 , bottom: 20, right: 0)
         
         // Do any additional setup after loading the view.
 
@@ -118,12 +124,8 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         
         cell.layer.borderWidth = 5.0
-        if broadcast.level == 1 {
-            cell.layer.borderColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1).cgColor
-        } else if broadcast.level == 2 {
+        if broadcast.level == 3 {
             cell.layer.borderColor = UIColor(red: 0.35, green: 0.35, blue: 0.35, alpha: 1).cgColor
-        } else if broadcast.level == 3 {
-            cell.layer.borderColor = UIColor(red: 0.50, green: 0.50, blue: 0.50, alpha: 1).cgColor
         } else if broadcast.level == 4 {
             cell.layer.borderColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1).cgColor
         } else {
