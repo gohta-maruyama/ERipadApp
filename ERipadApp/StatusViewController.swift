@@ -67,6 +67,7 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
             self.emergencyReadyFakeButton.alpha = 1.0
         }
         
+        
         guard let headerSize = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {return}
         headerSize.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 100)
         
@@ -125,12 +126,13 @@ class StatusViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         cell.layer.borderWidth = 5.0
         if broadcast.level == 3 {
-            cell.layer.borderColor = UIColor(red: 0.35, green: 0.35, blue: 0.35, alpha: 1).cgColor
+            cell.layer.borderColor = UIColor(red: 0.30, green: 0.30, blue: 0.30, alpha: 1).cgColor
         } else if broadcast.level == 4 {
-            cell.layer.borderColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1).cgColor
+            cell.layer.borderColor = UIColor(red: 0.60, green: 0.60, blue: 0.60, alpha: 1).cgColor
         } else {
-            cell.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
+            cell.layer.borderColor = UIColor(red: 0.90, green: 0.90, blue: 0.90, alpha: 1).cgColor
         }
+        
         
         if broadcast.status == 0 {
             cell.backgroundColor = .white

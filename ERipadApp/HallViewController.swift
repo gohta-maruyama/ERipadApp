@@ -83,9 +83,12 @@ class HallViewController: UIViewController, UITableViewDelegate, UITableViewData
         let hall = area.halls[indexPath.row]
 
         cell.textLabel?.text = hall.name
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 30)
         
         return cell
     }
+
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let statusViewController: StatusViewController = segue.destination as! StatusViewController
