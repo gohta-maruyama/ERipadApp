@@ -29,6 +29,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         SVProgressHUD.showSuccess(withStatus: "投稿しました")
         print("投稿しました")
         
+        self.titleTextField.text! = ""
+        self.commentTextView.text! = ""
+        
         UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
         
     }
@@ -42,6 +45,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.rowHeight = UITableView.automaticDimension
         
         
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
@@ -124,9 +128,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         cell.setPostData(postArray[indexPath.row])
         
+        print(postArray[indexPath.row].caption!)
+        print(postArray[indexPath.row].comment!)
+        
         return cell
     }
     
+
 
     /*
     // MARK: - Navigation

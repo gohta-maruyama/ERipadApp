@@ -26,8 +26,10 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func setPostData(_ postData: PostData) {
-        self.captionLabel.text = String(describing: postData.caption)
+        self.captionLabel.text = postData.caption
+        
         self.commentLabel.text = postData.comment
+        
         self.dateLabel.text = ""
         if let date = postData.date {
             let formatter = DateFormatter()

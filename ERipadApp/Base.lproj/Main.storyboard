@@ -254,7 +254,6 @@
                         <viewLayoutGuide key="safeArea" id="g0j-YB-LHE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tIn-NS-9td" firstAttribute="top" secondItem="5ee-So-6Pn" secondAttribute="bottom" constant="20" id="2TF-EF-iOo"/>
                             <constraint firstItem="tIn-NS-9td" firstAttribute="leading" secondItem="g0j-YB-LHE" secondAttribute="leading" constant="10" id="4D5-uP-5Xm"/>
                             <constraint firstItem="Jv5-NC-x8V" firstAttribute="top" secondItem="tIn-NS-9td" secondAttribute="bottom" constant="5" id="5j5-rA-LrK"/>
                             <constraint firstItem="BO8-Hq-YfH" firstAttribute="trailing" secondItem="Jv5-NC-x8V" secondAttribute="trailing" id="CXq-6e-v42"/>
@@ -264,6 +263,7 @@
                             <constraint firstItem="g0j-YB-LHE" firstAttribute="trailing" secondItem="5ee-So-6Pn" secondAttribute="trailing" constant="10" id="Uy6-XE-Kto"/>
                             <constraint firstItem="g0j-YB-LHE" firstAttribute="trailing" secondItem="Jv5-NC-x8V" secondAttribute="trailing" constant="10" id="bTA-JM-w9T"/>
                             <constraint firstItem="BO8-Hq-YfH" firstAttribute="top" secondItem="Jv5-NC-x8V" secondAttribute="bottom" constant="10" id="kGf-OM-tOA"/>
+                            <constraint firstItem="tIn-NS-9td" firstAttribute="top" secondItem="5ee-So-6Pn" secondAttribute="bottom" constant="20" id="kQP-jf-mcl"/>
                             <constraint firstItem="Jv5-NC-x8V" firstAttribute="leading" secondItem="tIn-NS-9td" secondAttribute="leading" id="vDp-8A-TEN"/>
                         </constraints>
                     </view>
